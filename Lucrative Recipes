@@ -1,0 +1,10 @@
+#Query user for amount of resources and store as separate integers
+stone_num = input("How much stone do you have?: ")
+
+stone_num = int(stone_num)
+
+#later address people who type letters instead of numerals
+
+stone_names = {"Birdbath" : 6st; "Drinking Fountain" : 8st2ir; "Flat Garden Rock" : 20st; "Garden Rock : 15st; "Pond Stone" : 10st; 
+"Stone Arch" : 90st; "Stone Lion-Dog" : 24st; "Stone Stool" : 3st; "Stone Table" : 8st; "Stone Tablet" : 12st; "Tall Garden Rock" : 60st; 
+"Tall Lantern" : 18st; "Western-Style Stone" : 30st; }
