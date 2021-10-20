@@ -1,10 +1,14 @@
-#Query user for amount of resources and store as separate integers
-stone_num = input("How much stone do you have?: ")
+#Query user for amount of resources and store as separate integers.  Use while loop and try/except to catch errors and report them to user
 
-stone_num = int(stone_num)
+while True:
+  try:
+    print("Hello, this program was made to find the most lucrative item you can craft in Animal Crossing New Horizons with basic resources.  When asked, please type the amount of resources you have as a positive integer or 0.")
+    stoneNum = int(input("How much stone do you have?: "))
+    ironNum = int(input("How much iron do you have?: "))
+    clayNum = int(input("How much clay do you have?: "))
+    
 
-#later address people who type letters instead of numerals
 
-stone_names = {"Birdbath" : 6st; "Drinking Fountain" : 8st2ir; "Flat Garden Rock" : 20st; "Garden Rock : 15st; "Pond Stone" : 10st; 
+stoneRecipes = {"Birdbath" : 6st; "Drinking Fountain" : 8st2ir; "Flat Garden Rock" : 20st; "Garden Rock : 15st; "Pond Stone" : 10st; 
 "Stone Arch" : 90st; "Stone Lion-Dog" : 24st; "Stone Stool" : 3st; "Stone Table" : 8st; "Stone Tablet" : 12st; "Tall Garden Rock" : 60st; 
 "Tall Lantern" : 18st; "Western-Style Stone" : 30st; }
