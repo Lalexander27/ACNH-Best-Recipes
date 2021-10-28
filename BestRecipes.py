@@ -1,5 +1,6 @@
 #Query user for amount of resources and store as separate integers.  Use while loop and try/except to catch errors and report them to user
 def craftRecipes(resources, recipeList):
+  #resources is an integer holding the number of resources, recipeList is a dictionary of items you can craft with that resource
   #store resource number, prepare dictionary for crafted items
   finalResources = resources
   craftedItems = {}
@@ -28,8 +29,12 @@ def main():
       stoneNum = int(input("How much stone do you have?: "))
       ironNum = int(input("How much iron do you have?: "))
       clayNum = int(input("How much clay do you have?: "))
+      
+      if stoneNum < 0 or ironNum < 0 or clayNum < 0:
+        raise ValueError
+        
     except ValueError:
-      print("Please type the number of resources you have as an integer.")
+      print("Please type the number of resources you have as a positive integer.")
     else:
       break
 
