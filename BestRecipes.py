@@ -24,7 +24,7 @@ def craftRecipes(resources, recipeList):
 def main():
   while True:
     try:
-      print("Hello, this program was made to find the most lucrative item you can craft in Animal Crossing New Horizons with basic resources.  When asked, please type the amount of resources you have as a positive integer or 0.")
+      print("Hello, this program is to help you select items to craft in Animal Crossing New Horizons based off your resources.\nThe goal is to craft profitable resources while minimizing crafting time.\n When asked, please type the amount of resources you have as a positive integer or 0.")
       stoneNum = int(input("How much stone do you have?: "))
       ironNum = int(input("How much iron do you have?: "))
       clayNum = int(input("How much clay do you have?: "))
