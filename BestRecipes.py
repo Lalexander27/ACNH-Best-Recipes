@@ -39,8 +39,11 @@ def main():
       stoneNum = int(input("How much stone do you have?: "))
       ironNum = int(input("How much iron do you have?: "))
       clayNum = int(input("How much clay do you have?: "))
+      woodNum = int(input("How much wood do you have?: "))
+      hardwoodNum = int(input("How much hardwood do you have?: "))
+      softwoodNum = int(input("How much softwood do you have?: "))
       
-      if stoneNum < 0 or ironNum < 0 or clayNum < 0:
+      if stoneNum < 0 or ironNum < 0 or clayNum < 0 or woodNum < 0 or hardwoodNum < 0 or softwoodNum < 0:
         raise ValueError
         
     except ValueError:
@@ -66,6 +69,24 @@ def main():
   clayValue = {"Raccoon Figurine": 1200, "Pot": 1000, "Modeling Clay": 400}
   clayProfit = profitRecipes(craftedClay, clayRecipes)
 
+  woodRecipes = {30: "Wooden Double Bed", 18: "Wooden Simple Bed", 16: "Wooden Chest", 15: "Wooden-Mosaic Wall", 12: "Wooden Wardrobe", 10: "Wooden Low Table", 8: "Birdcage", 6: "Wooden Chair", 4: "Wooden Stool", 3: "Paw-Print Doorplate"}
+  craftedWood = craftRecipes(woodNum, woodRecipes)
+  print("You should craft:", craftedWood)
+  woodValue = {"Wooden Double Bed": 3600, "Wooden Simple Bed": 2160, "Wooden Chest": 1920, "Wooden-Mosaic Wall": 1800, "Wooden Wardrobe": 1440, "Wooden Low Table": 1200, "Birdcage": 960, "Wooden Chair": 720, "Wooden Stool": 480, "Paw-Print Doorplate": 360}
+  woodProfit = profitRecipes(craftedWood, woodRecipes)
+
+  hardwoodRecipes = {30: "Log Bed", 15: "Cabin Wall", 12: "Log Garden Lounge", 8: "Music Stand", 5: "Wooden-Plank Sign", 4: "Log Stool", 3: "Boomerang"}
+  craftedHardwood = craftRecipes(hardwoodNum, hardwoodRecipes)
+  print("You should craft:", craftedHardwood)
+  hardwoodValue = {"Log Bed": 3600, "Cabin Wall": 1800, "Log Garden Lounge": 1440, "Music Stand": 960, "Wooden-Plank Sign": 600, "Log Stool": 480, "Boomerang": 360}
+  hardwoodProfit = profitRecipes(craftedHardwood, hardwoodRecipes)
+
+  softwoodRecipes = {15: "Brown Herringbone Wall", 8: "Deer Decoration", 5: "Rocking Horse", 4: "Decoy Duck", 3: "Old-Fashioned Washtub"}
+  craftedSoftwood = craftRecipes(softwoodNum, softwoodRecipes)
+  print("You should craft:", craftedSoftwood)
+  softwoodValue = {"Brown Herringbone Wall": 1800, "Deer Decoration": 960, "Rocking Horse": 600, "Decoy Duck": 480, "Old-Fashioned Washtub": 360}
+  softwoodProfit = profitRecipes(craftedSoftwood, softwoodRecipes)
+  
   totalProfit = stoneProfit + ironProfit + clayProfit
   #note that bells are the currency of the game
   print("Selling all of these items will yield", totalProfit, "bells.")
